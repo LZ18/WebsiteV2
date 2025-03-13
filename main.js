@@ -19,7 +19,7 @@ camera.position.set(0, 10, 30);
 
 // Texture loader setup
 const loader = new TextureLoader();
-loader.setPath('img/'); // Set path for texture loader
+loader.setPath('/WebsiteV2/img/'); // Set path for texture loader
 
 // Function to load textures
 function loadTexture(path) {
