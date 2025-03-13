@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Me</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            text-align: center;
+            max-width: 800px;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            animation: slideIn 1s ease forwards;
+        }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-50px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        h1 {
+            font-size: 3rem;
+            color: #333;
+        }
+
+        p {
+            font-size: 1.2rem;
+            color: #555;
+            line-height: 1.6;
+            margin-bottom: 20px;
+        }
+
+        .interests {
+            margin-top: 30px;
+            text-align: left;
+            padding-left: 20px;
+        }
+
+        .interests p {
+            font-size: 1.1rem;
+            font-weight: 500;
+            color: #777;
+            margin-bottom: 5px;
+        }
+
+        .interests ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .interests li {
+            margin: 0 0 10px;
+            font-size: 1.1rem;
+            color: #555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Connections Are Key!</h1>
+        <p>Here Are My References</p>
+
+        <div class="interests">
+            <p></p>
+            <ul>
+                <li>Heather Miller - Director Of IT (Wallace and Carey)</li>
+                <li>Kevin Pasenau - Solution Architect / Internship Mentor (Wallace & Carey)</li>
+                <li>Steph Elder - Outreach Director (University Of Lethbridge)</li>
+                <li>Tyler Hirshe - Manager (HighTide)</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
