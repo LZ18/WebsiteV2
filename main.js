@@ -31,7 +31,7 @@ const materials = [
     'Cplusplus.jpg',
     'github.jpg',
     'LinkdIn.jpg',
-    'UofL.jpeg',
+    'UofL.jpg',
     'blue-robotic-arm.jpg',
     'aboutme.jpg',
 ].map(file => new THREE.MeshBasicMaterial({ map: loadTexture(file) }));
