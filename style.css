@@ -218,31 +218,7 @@ body {
 .show-dropdown .dropdown__arrow {
   transform: rotate(180deg);
 }
-.clock-dial {
-  position: fixed; /* Changed to fixed to position relative to the viewport */
-  bottom: 20px;  /* Distance from the bottom of the viewport */
-  left: 20px; /* Distance from the left of the viewport */
-  width: 100px;  /* Dial width */
-  height: 100px; /* Dial height */
-  border: 5px solid #ccc;  /* Border styling */
-  border-radius: 50%; /* Makes it circular */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer; /* Cursor changes to pointer */
-  z-index: 10; /* Ensure it's on top of other elements */
-}
 
-.clock-handle {
-  width: 10px; /* Handle width */
-  height: 10px; /* Handle height */
-  background: #000; /* Handle color */
-  border-radius: 50%; /* Makes the handle circular */
-  position: absolute; /* Positioning for rotation */
-  transform: translate(-50%, -50%); /* Centers the handle */
-  top: 50%; /* Centers the handle vertically */
-  left: 50%; /* Centers the handle horizontally */
-}
 
 
 
