@@ -2,55 +2,72 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <style type ="text/css">
-        
-    </style>
     <title>Website Portfolio</title>
-    <base href="/WebsiteV2/">
+    <!-- Base must come before any relative URLs -->
+    <base href="/WebsiteV2/" />
+
+    <!-- Local files: no leading slash -->
+    <link rel="icon" type="image/svg+xml" href="vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- External assets can remain absolute -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <style type="text/css">
+      /* your inline styles here */
+    </style>
   </head>
   <body>
-    <!--==================WELCOME MESSAGE ============-->
+    <!--================== WELCOME MESSAGE ============-->
     <section>
-        <h1 class="heading-1">Welcome! Take a spin around my digital world. Click buttons, play with the cube, and discover what's in store. Enjoy!</h1>
+      <h1 class="heading-1">
+        Welcome! Take a spin around my digital world. Click buttons, play with the cube, and discover what's in store. Enjoy!
+      </h1>
     </section>
+
     <!--=============== HEADER ===============-->
     <header class="header">
-        <nav class="nav container">
-            <div class="nav__data">
-                <!-- LEFT SIDE: Logo -->
-                <a href="#" class="nav__logo">
-                  <i class="ri-code-s-slash-line"></i> Luke Zosiuk
-                </a>
-              
-                <!-- RIGHT SIDE: Toggle + Icons -->
-                <div class="nav__right">
-                  <div class="nav__toggle" id="nav-toggle">
-                    <i class="ri-menu-line nav__toggle-menu"></i>
-                    <i class="ri-close-line nav__toggle-close"></i>
-                  </div>
-              
-                  <div class="nav__icons">
-                    <a href="https://www.ulethbridge.ca/future-student/march-15-awards" target="_blank">
-                      <i class="fas fa-graduation-cap"></i>
-                    </a>
-                    <a href="https://github.com/LZ18" target="_blank">
-                      <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/luke-zosiuk-7b4b60250" target="_blank">
-                      <i class="fab fa-linkedin"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-              
-              
-            <div id="clockDial" class="clock-dial">
-                <div id="handle" class="clock-handle"></div>
+      <nav class="nav container">
+        <div class="nav__data">
+          <!-- LEFT SIDE: Logo -->
+          <a href="#" class="nav__logo">
+            <i class="ri-code-s-slash-line"></i> Luke Zosiuk
+          </a>
+
+          <!-- RIGHT SIDE: Toggle + Icons -->
+          <div class="nav__right">
+            <div class="nav__toggle" id="nav-toggle">
+              <i class="ri-menu-line nav__toggle-menu"></i>
+              <i class="ri-close-line nav__toggle-close"></i>
             </div>
+
+            <div class="nav__icons">
+              <a href="https://www.ulethbridge.ca/future-student/march-15-awards" target="_blank">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+              <a href="https://github.com/LZ18" target="_blank">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="https://www.linkedin.com/in/luke-zosiuk-7b4b60250" target="_blank">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div id="clockDial" class="clock-dial">
+          <div id="handle" class="clock-handle"></div>
+        </div>
            
             <!--=============== NAV MENU ===============-->
             <div class="nav__menu" id="nav-menu">
