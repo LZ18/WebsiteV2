@@ -344,6 +344,29 @@ function animate() {
     }
 
     updateParticles1();
+
+    // 1) a function that updates camera + renderer
+function onWindowResize() {
+  // get the new size
+  const width  = window.innerWidth;
+  const height = window.innerHeight;
+
+  // update camera
+  camera.aspect = width / height;
+  camera.updateProjectionMatrix();
+
+  // update renderer
+  renderer.setSize(width, height);
+  // optional: keep resolution crisp on Hi-DPI screens
+  renderer.setPixelRatio(window.devicePixelRatio);
+}
+
+// 2) listen for resize events
+window.addEventListener('resize', onWindowResize);
+
+// 3) call once to set initial size
+onWindowResize();
+
     
 
     // Render scene
