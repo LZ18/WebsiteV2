@@ -13,7 +13,6 @@ html, body {
   display: block;            /* remove inline-block whitespace */
   width: 100vw;              /* viewport width */
   height: 100vh;             /* viewport height */
-  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;

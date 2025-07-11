@@ -50,7 +50,7 @@ scene.add(box, pointLight);
 
 const particleCount1 = 100000;
 const particles1 = new Float32Array(particleCount1 * 3); // 3 coordinates per particle
-const velocities1 = new Float32Array(particleCount1 * 1); // 3 velocity components per particle
+const velocities1 = new Float32Array(particleCount1 * 3); // 3 velocity components per particle
 
 for (let i = 0; i < particleCount1; i++) {
     particles1[i * 3] = Math.random() * 1000 - 100; // x
