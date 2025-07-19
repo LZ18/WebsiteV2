@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Video Showcase</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: flex-start;
+            gap: 20px;
+            margin: 20px;
+        }
+
+        .video-container, .text-container {
+            max-width: 400px;
+            width: 70%;
+            margin: 0;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            background-color: #fff;
+        }
+
+        .video-container {
+            display: flex;
+            justify-content: center;
+        }
+
+        video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .text-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .description {
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="video-container">
+            <video controls>
+                <source src="vidz/MotionSensor.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+        </div>
+        <div class="text-container">
+            <div class="description">
+                <h1>Motion Detector!</h1>
+                <p>An ultrasonic sensor measures distance by emitting ultrasonic waves and calculating the time it takes for the echo to return. This principle, known as echolocation, is similar to how bats navigate. The Arduino microcontroller reads the sensor data and performs actions based on predefined conditions. In this project, the piezo buzzer and LED are activated when an object is detected within a specified distance. My inspiration behind this was Theft being so heavy on vehicles in todays world, realistically you could set this up on your back window and it can send a reading to your phone when it detects movement. </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
