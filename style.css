@@ -370,31 +370,38 @@ body {
 /*=============== WELCOME MESSAGE ===============*/
 section {
   position: absolute;
-  top: 12rem; /* Adjust as needed */
-  left: 18%; /* Center horizontally */
-  transform: translateX(-90%);
+  top: 31%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   text-align: center;
-  width: 80%;
+  width: 90%;
+  max-width: 900px;
+  padding: 1rem;
+  z-index: 1;
 }
 
-@keyframes slideInLeft {
+
+@keyframes slideInCenter {
   from {
-    transform: translateX(-600px);
+    opacity: 0;
+    transform: translate(-50%, -60%);
   }
   to {
-    transform: translateX(1200px);
+    opacity: 1;
+    transform: translate(-50%, -50%);
   }
 }
 
 .heading-1 {
-  animation-name: slideInLeft;
-  animation-duration: 2s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: 1;
-  animation-direction: normal;
-  animation-fill-mode: forwards;
-  transform: translateX(-650px);
-  font-size: 3rem;
-  color: var(--text-color); /* Grey text color */
+  font-size: clamp(1.5rem, 5vw, 3rem); /* responsive scaling */
+  color: var(--text-color);
+  margin: 0;
+}
+
+
+@media screen and (max-width: 600px) {
+  .heading-1 {
+    top: 38%;
+    font-size: 1.5rem;
+  }
 }
