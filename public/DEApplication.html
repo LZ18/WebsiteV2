@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>iOS Attendance App – Project Overview</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 40px 16px;
+            font-family: Arial, sans-serif;
+            background: #f2f2f2;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: #fff;
+            padding: 40px 32px;
+            border-radius: 12px;
+            box-shadow: 0 0 20px rgba(0,0,0,0.08);
+        }
+
+        h1 {
+            font-size: 2rem;
+            margin-bottom: 6px;
+        }
+
+        h2 {
+            margin-top: 32px;
+            font-size: 1.4rem;
+            color: #444;
+        }
+
+        .section-title {
+            margin-top: 32px;
+            font-size: 1.3rem;
+            font-weight: bold;
+            color: #222;
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        .skill-badge {
+            display: inline-block;
+            background: #eef4ff;
+            border: 1px solid #d0dfff;
+            padding: 4px 10px;
+            margin: 4px 6px 4px 0;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .meta {
+            margin-bottom: 20px;
+            color: #666;
+        }
+
+        .meta em {
+            display: block;
+            margin-top: 4px;
+        }
+
+        .gallery {
+            margin-top: 24px;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-card {
+            background: #fafafa;
+            border-radius: 12px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .gallery-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .gallery-caption {
+            padding: 12px 14px 14px;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .gallery-caption strong {
+            display: block;
+            margin-bottom: 4px;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 18px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>iOS Attendance App Development</h1>
+        <div class="meta">
+            <strong>Sept 2024 – Present</strong>
+            <em>Associated with The University of Lethbridge</em>
+        </div>
+
+        <p>
+            The iPad attendance app is a SwiftUI-based tool built to track morning sign-ins, afternoon sign-outs,
+            and notes for 1,000+ students (and growing). Staff load rosters from CSV, tap campers to mark attendance,
+            view a weekly grid, and export CSV reports. Data is stored locally for offline use and synced in real time
+            via Firebase Cloud Firestore, organized by week for fast queries. Firestore listeners keep multiple devices
+            updated instantly, while batched writes and composite indexes maintain performance at scale.
+        </p>
+
+        <p>
+            Security is handled through Firestore Security Rules, Firebase Auth (recommended), and App Check to ensure
+            only authorized staff devices can read/write. Apple Developer setup includes creating an App ID, certificates,
+            and provisioning profiles (development for testing, distribution for TestFlight or MDM). Xcode manages
+            build/signing. Firebase is integrated via Swift Package Manager, and the app is deployed through TestFlight,
+            Ad Hoc, or MDM for fleet devices.
+        </p>
+
+        <p>
+            The architecture consists of SwiftUI views (Home, Live Attendance, Week Overview, Camper Profile), models
+            (Camper, attendance dictionaries), and a ViewModel that parses CSVs, manages state, and handles Firestore
+            reads/writes. Data is partitioned by week, timestamps are stored in ISO-8601 format, and CSV exports are
+            generated on-device. Offline Firestore caching ensures uninterrupted use in low-connectivity environments,
+            syncing automatically when online.
+        </p>
+
+        <p>
+            The app is optimized for large rosters, with virtualized lists, minimal entitlements for smooth App Store
+            review, and optional monitoring via Crashlytics and Firebase Performance.
+        </p>
+
+        <h2>Skills Used</h2>
+        <div>
+            <span class="skill-badge">iOS Development</span>
+            <span class="skill-badge">SwiftUI</span>
+            <span class="skill-badge">Agile Methodologies</span>
+            <span class="skill-badge">Cross-functional Team Leadership</span>
+            <span class="skill-badge">C++</span>
+            <span class="skill-badge">Databases</span>
+            <span class="skill-badge">Google Frameworks</span>
+            <span class="skill-badge">Mobile App Development</span>
+            <span class="skill-badge">Information Security</span>
+            <span class="skill-badge">Reliability Engineering</span>
+        </div>
+
+        <h2>Screenshots</h2>
+        <div class="gallery">
+            <div class="gallery-card">
+                <img src="img/Landingpage.jfif" alt="App home screen with week tabs and main actions">
+                <div class="gallery-caption">
+                    <strong>Landing Page</strong>
+                    The home hub for staff. Select the day, then quickly jump into Morning Sign In, Afternoon Sign Out,
+                    iPad logs, live attendance, CSV imports, and admin tools like Reset Data.
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="img/Viewmodels.jfif" alt="Live attendance grid with campers and daily in/out status">
+                <div class="gallery-caption">
+                    <strong>Live Attendance Grid</strong>
+                    A high-level weekly view that shows each camper’s in/out status for every day, updating in real time
+                    across devices through Firestore listeners.
+                </div>
+            </div>
+
+            <div class="gallery-card">
+                <img src="img/Profiles.jfif" alt="Morning sign-in list of campers">
+                <div class="gallery-caption">
+                    <strong>Morning Sign In Flow</strong>
+                    Staff quickly scan and tap through a roster of campers to mark attendance, with search and detail
+                    views available for deeper context when needed.
+                </div>
+            </div>
+        </div>
+
+        <h2 class="section-title">Profiles</h2>
+        <p>
+            Student profiles display each camper’s name, camp photo, and details, along with their attendance history and notes.
+            Staff can add or edit notes, update sign-in/out times, and review trends over the course of a week or season.
+        </p>
+
+        <h2 class="section-title">View Models</h2>
+        <p>
+            ViewModels power the app by separating logic from the UI. The AttendanceViewModel parses CSVs, tracks
+            sign-ins/outs, and syncs updates to Firestore. LiveAttendanceViewModel streams real-time updates, while
+            other ViewModels manage exports, profile details, and admin tools.
+        </p>
+
+        <h2 class="section-title">Landing Page Experience</h2>
+        <p>
+            The landing page acts as a clean, intuitive hub for managing daily attendance workflows. Staff can select the
+            current day, quickly record morning sign-ins or afternoon sign-outs, open live attendance, or upload new CSV
+            data as rosters change, keeping the entire system aligned with real-world camp operations.
+        </p>
+    </div>
+</body>
+</html>
