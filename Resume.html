@@ -9,30 +9,38 @@
             font-family: Arial, sans-serif;
             display: flex;
             justify-content: center;
-            align-items: center;
-            height: 100vh;
+            align-items: flex-start;
+            min-height: 100vh;
             margin: 0;
+            padding: env(safe-area-inset-top, 36px) 24px 24px 24px;
+            box-sizing: border-box;
             background-color: #f0f0f0;
+            overflow-y: auto;
         }
         
         .image-container {
-            max-width: 800px;
+            width: min(1100px, 85vw);
+            max-width: 100%;
             box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
             border-radius: 10px;
-            overflow: hidden;
+            background: #fff;
+            overflow: visible;
+            padding: 8px;
+            box-sizing: border-box;
+            margin-bottom: 24px;
         }
 
         img {
             display: block;
             width: 100%;
             height: auto;
+            object-fit: contain;
         }
     </style>
 </head>
 <body>
     <div class="image-container">
-        <!-- Use absolute path to ensure correct resolution after build -->
-        <img src="/img/Resume.jpg?v=2" alt="My Resume">
+        <img src="/img/Resume2.jpg?v=2" alt="My Resume">
     </div>
 </body>
 </html>
